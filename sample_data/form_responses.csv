@@ -1,0 +1,6 @@
+timestamp,id,nome,categoria,status,prioridade,descricao
+2026-08-01T09:00:00Z,REG-001,Participante 01,Atendimento,Novo,Alta,Registro demonstrativo aguardando validação
+2026-08-02T10:15:00Z,REG-002,Participante 02,Curso,Em análise,Média,Inscrição demonstrativa para processamento
+2026-08-03T14:30:00Z,REG-003,Participante 03,Atendimento,Concluído,Baixa,Registro demonstrativo processado
+2026-08-04T08:40:00Z,REG-004,Participante 04,Curso,Pendente,Alta,Documento demonstrativo pendente
+2026-08-05T16:20:00Z,REG-005,Participante 05,Atendimento,Em análise,Alta,Requer revisão de cadastro
