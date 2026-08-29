@@ -1,0 +1,7 @@
+/** Configuração central da automação. */
+
+const SETTINGS = {
+  EMAIL_ALERTS_ENABLED: false,
+  ALERT_PRIORITY: 'Alta',
+  TIMEZONE: Session.getScriptTimeZone(),
+};
