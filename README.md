@@ -170,6 +170,15 @@ Credenciais, tokens e chaves de API não devem ser publicados.
 
 ## 👨‍💻 Autor
 
-**Filipe Gimenes de Morais**
+**Filipe G Morais**
 
 Projeto demonstrativo de automação de processos e integração com Google Workspace, desenvolvido como referência técnica reutilizável.
+
+---
+
+## Author
+
+**Filipe G Morais**
+
+GitHub: https://github.com/sayjinblackbelt  
+Repository: https://github.com/sayjinblackbelt/google-workspace-automation
