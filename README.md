@@ -1,16 +1,34 @@
-# Google Workspace Automation
+# ⚙️ Google Workspace Automation
 
-> **Google Forms · Google Sheets · Apps Script · Process Automation · Reporting**
+🇧🇷 Português | [🇺🇸 English](README.en.md) | [🇪🇸 Español](README.es.md)
 
-Case demonstrativo de automação de processos que transforma respostas de formulários em dados validados, registros classificados, pendências e indicadores atualizados automaticamente.
+> **Google Forms · Google Sheets · Apps Script · Automação de Processos · Indicadores**
 
-## 🎯 Business Problem
+Case técnico demonstrativo de automação de processos que transforma respostas de formulários em dados validados, registros classificados, pendências e indicadores atualizados automaticamente.
+
+## 📌 Sobre o projeto
 
 Processos baseados em formulários frequentemente exigem conferência manual, organização de respostas e consolidação de informações.
 
-Este projeto demonstra uma alternativa automatizada utilizando ferramentas nativas do Google Workspace.
+Este projeto demonstra como ferramentas nativas do **Google Workspace** podem ser integradas para reduzir tarefas repetitivas e criar um fluxo mais estruturado entre coleta, processamento, acompanhamento e análise de dados.
 
-## 💡 Solution
+O repositório funciona como um **case técnico reutilizável**, sem depender de dados ou nomes de organizações específicas.
+
+## 🎯 Problema
+
+Em fluxos manuais, uma equipe pode precisar:
+
+- conferir respostas;
+- corrigir inconsistências;
+- organizar registros;
+- identificar pendências;
+- classificar prioridades;
+- atualizar indicadores;
+- consolidar informações para acompanhamento.
+
+Essas etapas podem consumir tempo e gerar inconsistências quando executadas manualmente.
+
+## 💡 Solução
 
 ```text
 Google Forms
@@ -30,26 +48,26 @@ Dashboard
 Alertas opcionais
 ```
 
-## 🏗 Technical Architecture
+## 🏗️ Arquitetura técnica
 
 ```text
-FORM
- │
- ▼
-SHEETS → Dados brutos
- │
- ▼
+FORMULÁRIO
+    │
+    ▼
+PLANILHA → Dados brutos
+    │
+    ▼
 APPS SCRIPT
- │
- ├── Validação
- ├── Normalização
- ├── Classificação
- └── Pendências
- │
- ▼
-PROCESSADO
- │
- ▼
+    │
+    ├── Validação
+    ├── Normalização
+    ├── Classificação
+    └── Pendências
+    │
+    ▼
+DADOS PROCESSADOS
+    │
+    ▼
 DASHBOARD
 ```
 
@@ -59,10 +77,10 @@ DASHBOARD
 - validação de campos;
 - normalização de registros;
 - identificação de pendências;
-- classificação de risco;
+- classificação de risco ou prioridade;
 - indicadores automáticos;
 - dashboard no Sheets;
-- gatilho automático após novas respostas;
+- gatilhos após novas respostas;
 - estrutura opcional para alertas.
 
 ## 📊 Indicadores
@@ -75,6 +93,33 @@ DASHBOARD
 | Risco Alto | Priorização |
 | Risco Médio | Acompanhamento |
 | Risco Baixo | Monitoramento |
+
+## 🧠 Competências demonstradas
+
+### Processos
+- mapeamento de fluxos;
+- levantamento de requisitos;
+- definição de regras;
+- melhoria de processos.
+
+### Google Workspace
+- Google Forms;
+- Google Sheets;
+- Google Apps Script.
+
+### Automação
+- gatilhos;
+- validações;
+- normalização;
+- classificação;
+- tratamento de pendências;
+- alertas.
+
+### Dados
+- estruturação;
+- qualidade;
+- indicadores;
+- dashboards.
 
 ## 📁 Estrutura
 
@@ -99,8 +144,11 @@ google-workspace-automation/
 
 Consulte:
 
-- `docs/IMPLEMENTATION_GUIDE.md`
-- `docs/GOOGLE_FORM_TEMPLATE.md`
+- [Guia de implementação](docs/IMPLEMENTATION_GUIDE.md)
+- [Modelo de formulário](docs/GOOGLE_FORM_TEMPLATE.md)
+- [Case para portfólio](docs/PORTFOLIO_CASE.md)
+- [Arquitetura visual](docs/ARCHITECTURE_VISUAL.md)
+- [Especificação do dashboard](docs/DASHBOARD_SPEC.md)
 
 ## 🔒 Dados e confidencialidade
 
@@ -108,22 +156,20 @@ Este repositório utiliza exclusivamente dados fictícios ou simulados.
 
 Não contém dados reais de empresas, colaboradores, clientes, alunos ou participantes.
 
-## 🧠 Competências demonstradas
+Credenciais, tokens e chaves de API não devem ser publicados.
 
-**Processos:** mapeamento, requisitos e fluxos.
+## 📈 Possíveis evoluções
 
-**Google Workspace:** Forms, Sheets e Apps Script.
+- integração com outros serviços;
+- notificações automatizadas;
+- novos critérios de classificação;
+- dashboards mais avançados;
+- logs de processamento;
+- testes automatizados;
+- APIs e integrações externas.
 
-**Automação:** gatilhos, validações, classificação e alertas.
+## 👨‍💻 Autor
 
-**Dados:** estruturação, qualidade e indicadores.
+**Filipe Gimenes de Morais**
 
-## 📚 Case completo
-
-Para uma visão orientada a portfólio:
-
-- `docs/PORTFOLIO_CASE.md`
-- `docs/ARCHITECTURE_VISUAL.md`
-- `docs/DASHBOARD_SPEC.md`
-
-**Finalidade:** demonstração técnica de automação de processos e integração com Google Workspace.
+Projeto demonstrativo de automação de processos e integração com Google Workspace, desenvolvido como referência técnica reutilizável.
