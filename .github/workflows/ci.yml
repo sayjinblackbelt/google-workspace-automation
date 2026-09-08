@@ -24,7 +24,8 @@ jobs:
           set -euo pipefail
           for file in appsscript/*.gs; do
             echo "Checking $file"
-            node --check "$file"
+            cp "$file" /tmp/gs-check.js
+            node --check /tmp/gs-check.js
           done
 
       - name: Validate sample data
