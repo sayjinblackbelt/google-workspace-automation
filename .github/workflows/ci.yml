@@ -1,0 +1,54 @@
+name: Google Workspace Automation CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Validate Apps Script syntax
+        shell: bash
+        run: |
+          set -euo pipefail
+          for file in appsscript/*.gs; do
+            echo "Checking $file"
+            node --check "$file"
+          done
+
+      - name: Validate sample data
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s sample_data/form_responses.csv
+          head -n 1 sample_data/form_responses.csv | grep -q '^timestamp,id,nome,categoria,status,prioridade,descricao$'
+
+      - name: Validate portfolio documentation
+        shell: bash
+        run: |
+          set -euo pipefail
+          for file in README.md README.en.md README.es.md; do
+            test -s "$file"
+            grep -q "Filipe G Morais" "$file"
+            grep -q "github.com/sayjinblackbelt" "$file"
+          done
+
+      - name: Check for likely secrets
+        shell: bash
+        run: |
+          set -euo pipefail
+          if grep -RInE '(AIza[0-9A-Za-z_-]{20,}|ghp_[0-9A-Za-z]{20,}|sk-[A-Za-z0-9_-]{20,}|BEGIN (RSA|OPENSSH|EC|DSA) PRIVATE KEY)' . --exclude-dir=.git; then
+            echo "Potential secret detected."
+            exit 1
+          fi
