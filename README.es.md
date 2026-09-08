@@ -92,6 +92,11 @@ No debe contener datos reales de empresas, empleados, clientes, estudiantes o pa
 
 ## 👨‍💻 Autor
 
-**Filipe Gimenes de Morais**
+**Filipe G Morais**
 
 Proyecto técnico de automatización de procesos e integración con Google Workspace, desarrollado como caso de referencia reutilizable.
+
+
+---
+
+Repositorio: https://github.com/sayjinblackbelt/google-workspace-automation
